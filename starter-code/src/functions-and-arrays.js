@@ -11,15 +11,48 @@ var words = [
   'crackpot'
 ];
 
+function findLongestWord(arrayOfWords) {
+  var word = "";
+  for (var i = 0; i < arrayOfWords.length; i ++){
+    if (word.length < arrayOfWords[i].length) {
+      word = arrayOfWords[i]
+    }
+  }
+  return word
+}
+findLongestWord(words);
+
+
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function sumArray (arrayOfNumbers) {
+  var sum = 0;
+  for (i =0; i < arrayOfNumbers.length; i ++) {
+    sum += arrayOfNumbers[i];
+  }
+  return sum
+}
+sumArray(numbers);
 
 // Calculate the Average
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-// Array of Strings
+function avgOfArray(arrayOfNumbers) {
+  var sum = 0;
+  var avg = 0;
+  for (i = 0; i < arrayOfNumbers.length; i++) {
+    sum += arrayOfNumbers[i];
+    avg = sum / arrayOfNumbers.length;
+  }
+  return avg
+}
+avgOfArray(numbersAvg);
+
+
+// Avarage of array of Strings
 var wordsArr = [
   'seat',
   'correspond',
@@ -33,6 +66,9 @@ var wordsArr = [
   'palace'
 ];
 
+function avarageWordLength(arrayOfWords) {
+  
+}
 // Unique Arrays
 var wordsUnique = [
   'crab',
