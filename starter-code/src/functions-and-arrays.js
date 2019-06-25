@@ -67,8 +67,17 @@ var wordsArr = [
 ];
 
 function avarageWordLength(arrayOfWords) {
-  
-}
+  var wordSum = 0;
+  var avarage;
+  arrayOfWords.forEach((el) => {
+    wordSum += el.length
+  })
+  avarage = wordSum / arrayOfWords.length;
+
+  return avarage
+};
+avarageWordLength(wordsArr);
+
 // Unique Arrays
 var wordsUnique = [
   'crab',
@@ -84,6 +93,17 @@ var wordsUnique = [
   'bring'
 ];
 
+function uniqueArray(arrayOfWords) {
+  var clean = [];
+  for (var i =0; i < arrayOfWords.length; i ++){
+    if(clean.indexOf(arrayOfWords[i]) == -1) {
+      clean.push(arrayOfWords[i])
+    }
+  }
+  return clean
+}
+uniqueArray(wordsUnique);
+
 // Finding Elements
 var wordsFind = [
   'machine',
@@ -95,6 +115,16 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist(arrayOfWords, word) {
+
+  if (arrayOfWords.includes(word)) {
+    return true
+  } else {
+    return false
+  }
+}
+doesWordExist(wordsFind, "fog");
 
 // Counting Repetion
 var wordsCount = [
@@ -110,6 +140,16 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+function howManyTimes(arrayOfWord, word) {
+  var counterWord = 0
+  arrayOfWord.forEach(function (el) {
+    if (el === word) {
+      counterWord++
+    }
+  })
+  return counterWord
+}
+howManyTimes(wordsCount, "matter")
 // Bonus Quest
 
 var matrix = [
